@@ -414,7 +414,7 @@ window.setInterval(function() {
 		case (afterhoursval >= 3):
 		afterhoursbox.style.backgroundColor = cwcriticalcolor;
 		break;
-		case (afterhoursval == 56)
+		case (afterhoursval == 56):
 		afterhoursbox.style.backgroundColor = cwroutinecolor;
 		break;
 	}

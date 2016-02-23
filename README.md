@@ -3,18 +3,18 @@
 ## NEW MSP TICKETS
 | Color         | Low   | High 	|
 |---------------|-------|-------|
-| Routine		| 0		|	3	|
-| Medium		| 4		|	6	|
-| High 			| 7		|	9	|
-| Critical 		| 10	|	99	|
+| Routine		| 0		|	4	|
+| Medium		| 5		|	7	|
+| High 			| 8		|	10	|
+| Critical 		| 11	|	99	|
 
 ## MSP TICKETS IDLE
 | Color         | Low   | High 	|
 |---------------|-------|-------|
-| Routine		| 0		|	0	|
-| Medium		| 1		|	1	|
-| High 			| 2		|	2	|
-| Critical 		| 3		|	99	|
+| Routine		| 0		|	1	|
+| Medium		| 2		|	2	|
+| High 			| 3		|	3	|
+| Critical 		| 4		|	99	|
 
 ## NEW 95% SLA
 | Color         | Low   | High 	|
@@ -43,10 +43,10 @@
 ## OPEN MSP TICKETS
 | Color         | Low   | High 	|
 |---------------|-------|-------|
-| Routine		| 0		|	69	|
-| Medium		| 70	|	80	|
-| High 			| 81	|	90	|
-| Critical 		| 91	|	999	|
+| Routine		| 0		|	74	|
+| Medium		| 75	|	85	|
+| High 			| 86	|	99	|
+| Critical 		| 100	|	999	|
 
 ## CRITICAL / HIGH IDLE
 | Color         | Low   | High 	|
@@ -87,6 +87,7 @@
 | Medium		| 1		|	1	|
 | High 			| 2		|	2	|
 | Critical 		| 3		|	99	|
+| Routine		| 56	|	56	|
 
 ## MTTR
 | Color         | Low   | High 	|

@@ -156,16 +156,16 @@ window.setInterval(function() {
 	var newtix = parseInt(document.querySelector("#text-value-27").innerHTML);
 	
 	switch(true) {
-		case (newtix <= 3):
+		case (newtix <= 4):
 		newtixel.style.backgroundColor = cwroutinecolor;
 		break;
-		case (newtix >= 4 && newtix < 6):
+		case (newtix >= 5 && newtix < 7):
 		newtixel.style.backgroundColor = cwmediumcolor;
 		break;
-		case (newtix >= 7 && newtix <= 9):
+		case (newtix >= 8 && newtix <= 10):
 		newtixel.style.backgroundColor = cwhighcolor;
 		break;
-		case (newtix >= 10):
+		case (newtix >= 11):
 		newtixel.style.backgroundColor = cwcriticalcolor;
 		break;
 	}
@@ -181,16 +181,16 @@ window.setInterval(function() {
 	var mspidleval = parseInt(document.querySelector("#text-value-31").innerHTML);
 	document.querySelector("#text-title-31").style.color = "black";
 	switch(true) {
-		case (mspidleval == 0):
+		case (mspidleval <= 1):
 		mspidlebox.style.backgroundColor = cwroutinecolor;
 		break;
-		case (mspidleval == 1):
+		case (mspidleval == 2):
 		mspidlebox.style.backgroundColor = cwmediumcolor;
 		break;
-		case (mspidleval == 2):
+		case (mspidleval == 3):
 		mspidlebox.style.backgroundColor = cwhighcolor;
 		break;
-		case (mspidleval >= 3):
+		case (mspidleval >= 4):
 		mspidlebox.style.backgroundColor = cwcriticalcolor;
 		break;
 	}
@@ -271,16 +271,16 @@ window.setInterval(function() {
 	var openmsptixval = parseInt(document.querySelector("#text-value-22").innerHTML);
 	document.querySelector("#text-title-22").style.color = "black";
 	switch (true) {
-		case (openmsptixval < 70):
+		case (openmsptixval < 75):
 			openmsptixbox.style.backgroundColor = cwroutinecolor;
 			break;
-		case (openmsptixval >= 70 && openmsptixval <= 80):
+		case (openmsptixval >= 75 && openmsptixval <= 85):
 			openmsptixbox.style.backgroundColor = cwmediumcolor;
 			break;
-		case (openmsptixval > 80 && openmsptixval <= 90):
+		case (openmsptixval > 85 && openmsptixval <= 99):
 			openmsptixbox.style.backgroundColor = cwhighcolor;
 			break;
-		case (openmsptixval > 90):
+		case (openmsptixval > 99):
 			openmsptixbox.style.backgroundColor = cwcriticalcolor;
 			break;
 	}
@@ -414,6 +414,9 @@ window.setInterval(function() {
 		case (afterhoursval >= 3):
 		afterhoursbox.style.backgroundColor = cwcriticalcolor;
 		break;
+		case (afterhoursval == 56)
+		afterhoursbox.style.backgroundColor = cwroutinecolor;
+		break;
 	}
 
 
@@ -428,13 +431,13 @@ window.setInterval(function() {
 	document.querySelector("#text-title-28").style.color = "black";
 	document.querySelector("#text-subtitle-28").style.color = "black";
 	switch (true) {
-		case (mttrval < 3.5):
+		case (mttrval < 3.7):
 		mttrbox.style.backgroundColor = cwroutinecolor;
 		break;
-		case (mttrval >= 3.5 && mttrval < 3.7):
+		case (mttrval >= 3.7 && mttrval < 3.8):
 		mttrbox.style.backgroundColor = cwmediumcolor;
 		break;
-		case (mttrval >= 3.7 && mttrval < 3.9):
+		case (mttrval >= 3.8 && mttrval < 3.9):
 		mttrbox.style.backgroundColor = cwmediumcolor;
 		break;
 		case (mttrval >= 3.9):

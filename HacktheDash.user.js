@@ -491,7 +491,7 @@ window.setInterval(function() {
 
 
 
-}, 20000);
+}, 5000);
 
 
 

@@ -26,6 +26,14 @@ window.setInterval(function() {
 	var legend = document.querySelector("#pie-example-32 > svg > g.dxc-legend > g");
 	var pie = document.querySelector("#pie-example-32 > svg > g.dxc-series-group > g > g");
 
+	//we're going to store a value in the html, we'll retrieve it and then compare it to the number
+	//of pie sections existing, if this value differs, we need to reload the page to get the corrected
+	//pie colors and values.
+	var pieelementcount = 0;
+
+
+
+
 
 	//Retrieve the current colors from the legend, update the the legend colors
 	//while we're already there.
@@ -36,26 +44,50 @@ window.setInterval(function() {
 		{
 			routinecolor = document.defaultView.getComputedStyle(legend.childNodes[(i-1)],null).getPropertyValue("fill");
 			legend.childNodes[(i-1)].style.fill = cwroutinecolor;
+			pieelementcount += 1;
 		};
 
 		if (e.innerHTML.indexOf("Medium") > -1) 
 		{
 			mediumcolor = document.defaultView.getComputedStyle(legend.childNodes[(i-1)],null).getPropertyValue("fill");
 			legend.childNodes[(i-1)].style.fill = cwmediumcolor;
+			pieelementcount += 1;
 		};
 
 		if (e.innerHTML.indexOf("High") > -1) 
 		{
 			highcolor = document.defaultView.getComputedStyle(legend.childNodes[(i-1)],null).getPropertyValue("fill");
 			legend.childNodes[(i-1)].style.fill = cwhighcolor;
+			pieelementcount += 1;
 		};
 
 		if (e.innerHTML.indexOf("Critical") > -1) 
 		{
 			criticalcolor = document.defaultView.getComputedStyle(legend.childNodes[(i-1)],null).getPropertyValue("fill");
 			legend.childNodes[(i-1)].style.fill = cwcriticalcolor;
+			pieelementcount += 1;
 		};
 	};
+
+
+	//now that we have the number of sections, compare to the previous value and reload
+	//if they are different.
+	var piecount = document.getElementById('piecount');
+
+	if (!piecount) 
+	{
+		piecount = document.createElement("p");
+		piecount.id = "piecount";
+		piecount.style = "display:none;"
+		piecount.innerHTML = pieelementcount;
+		document.body.appendChild(piecount);
+	}
+	else
+	{
+		if (parseInt(piecount.innerHTML) != pieelementcount) {
+			location.reload();
+		}
+	}
 
 	//Update the pie parts with the proper colors.
 	for (var i = 0; i < pie.childNodes.length; i++) 
@@ -459,7 +491,7 @@ window.setInterval(function() {
 
 
 
-}, 5000);
+}, 20000);
 
 
 
